@@ -6,7 +6,6 @@ import { Linkedin, MessageCircle, Instagram } from "lucide-react";
 import { PulseLine } from "./pulse-line";
 import { useReveal } from "@/hooks/use-reveal";
 
-const CONTACT_EMAIL = "mandarkadam@swarainvestments.com";
 const CONTACT_PHONE = "+91-93228-55444";
 
 const dock = [
@@ -23,17 +22,25 @@ const fields = [
 
 export function ContactSection() {
   const [sectionRef, isVisible] = useReveal<HTMLDivElement>();
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent("Query from swarainvestments.com");
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")} ${data.get("surname")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    setStatus("sent");
+    setStatus("sending");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: data.get("name"),
+        surname: data.get("surname"),
+        email: data.get("email"),
+        message: data.get("message"),
+      }),
+    }).catch(() => null);
+
+    setStatus(res?.ok ? "sent" : "error");
   }
 
   return (
@@ -122,13 +129,20 @@ export function ContactSection() {
                   />
                 </div>
 
+                {status === "error" && (
+                  <p className="text-sm text-destructive">
+                    Could not send your message. Try again, or reach us directly.
+                  </p>
+                )}
+
                 <LiquidButton
                   type="submit"
                   variant="solid"
                   size="lg"
+                  disabled={status === "sending"}
                   className="w-full px-10 h-14 text-base"
                 >
-                  Submit
+                  {status === "sending" ? "Sending…" : "Submit"}
                 </LiquidButton>
               </form>
             )}

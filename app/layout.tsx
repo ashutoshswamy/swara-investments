@@ -1,5 +1,5 @@
 import React from "react"
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Libre_Baskerville, Imbue, DM_Sans, Sansation, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -90,6 +90,9 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg'],
   },
   manifest: '/site.webmanifest',
+  formatDetection: {
+    telephone: false,
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -101,6 +104,10 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#427A7A',
 }
 
 const jsonLd = {
@@ -120,7 +127,10 @@ const jsonLd = {
     addressCountry: 'IN',
   },
   areaServed: 'Mumbai',
-  sameAs: [],
+  sameAs: [
+    'https://www.linkedin.com/in/mandar-kadam-a6605a29/',
+    'https://www.instagram.com/swara_investments',
+  ],
 }
 
 export default function RootLayout({
