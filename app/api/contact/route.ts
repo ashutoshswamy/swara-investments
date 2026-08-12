@@ -1,6 +1,6 @@
 import { Resend } from "resend";
 
-const TO_EMAIL = "mandarkadam@swarainvestments.com";
+const TO_EMAIL = "swarainvestments@gmail.com";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "Swara Investments <noreply@swarainvestments.in>";
 
 function escapeHtml(value: string) {
