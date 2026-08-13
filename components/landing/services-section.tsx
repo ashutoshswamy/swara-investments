@@ -158,7 +158,10 @@ export function ServicesSection() {
       <div className="bg-accent text-accent-foreground py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-[0.7fr_1.3fr] gap-10 lg:gap-16">
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <h3 className="text-subheading tracking-tight mb-6">
+            <h3
+              className="tracking-tight mb-6 font-normal"
+              style={{ fontFamily: "var(--font-libre-baskerville)", fontSize: 45 }}
+            >
               Why choose us?
             </h3>
             <p className="text-accent-foreground/70 leading-relaxed max-w-sm mb-8">
@@ -168,7 +171,7 @@ export function ServicesSection() {
               asChild
               variant="solid"
               size="lg"
-              className="px-8 h-14 text-base group"
+              className="px-8 h-14 group"
             >
               <a href="#contact">
                 Get In Touch

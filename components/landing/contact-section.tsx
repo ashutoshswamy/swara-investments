@@ -66,7 +66,10 @@ export function ContactSection() {
               <span className="w-8 h-px bg-background/30" />
               Get in touch
             </span>
-            <h2 className="text-heading italic tracking-tight mb-4 leading-[1.1]">
+            <h2
+              className="italic tracking-tight mb-4 leading-[1.1] font-normal"
+              style={{ fontFamily: "var(--font-libre-baskerville)", fontSize: 45 }}
+            >
               Let&apos;s talk about your plan.
             </h2>
             <p className="text-xl font-subheading text-accent mb-6">
@@ -86,7 +89,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   className="group flex items-center gap-4 py-3 border-b border-background/10 text-background/70 hover:text-background transition-colors"
                 >
-                  <item.icon className="w-4 h-4 shrink-0 text-accent" />
+                  <item.icon className="w-4 h-4 shrink-0 text-background/70 group-hover:text-background transition-colors" />
                   <span className="text-sm font-mono tracking-[0.1em] uppercase">{item.label}</span>
                   <span className="ml-auto text-background/30 group-hover:text-accent group-hover:translate-x-1 transition-all">
                     →
@@ -125,7 +128,8 @@ export function ContactSection() {
                     required
                     rows={3}
                     placeholder="Tell us what you need"
-                    className="w-full bg-transparent border-b border-foreground/20 pb-2 pt-1 focus:outline-none focus:border-accent transition-colors duration-300 resize-none placeholder:text-foreground/30"
+                    style={{ fontFamily: "var(--font-sansation)", fontSize: 20 }}
+                    className="w-full bg-transparent border-b border-foreground/20 pb-2 pt-1 focus:outline-none focus:border-accent transition-colors duration-300 resize-none font-light placeholder:text-foreground/30"
                   />
                 </div>
 
@@ -140,7 +144,7 @@ export function ContactSection() {
                   variant="solid"
                   size="lg"
                   disabled={status === "sending"}
-                  className="w-full px-10 h-14 text-base"
+                  className="w-full px-10 h-14"
                 >
                   {status === "sending" ? "Sending…" : "Submit"}
                 </LiquidButton>

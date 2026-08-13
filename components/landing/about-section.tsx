@@ -211,8 +211,14 @@ function RegisterCta() {
         <h2 className="text-heading italic tracking-tight">
           Start your free registration <span className="line-through opacity-50">today</span> now
         </h2>
-        <LiquidButton variant="solid" size="lg" className="px-8 h-14 text-base" disabled>
-          Coming soon
+        <LiquidButton asChild variant="solid" size="lg" className="px-8 h-14">
+          <a
+            href="https://www.fundzbazar.com/customisedlinkregistration/7C7723/23642521713D3F632621713D246C3C7C77232F612A236425"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register now
+          </a>
         </LiquidButton>
       </div>
     </div>
@@ -234,8 +240,8 @@ export function AboutSection() {
         </div>
       ))}
 
-      <PlatformsSection />
       <RegisterCta />
+      <PlatformsSection />
     </section>
   );
 }

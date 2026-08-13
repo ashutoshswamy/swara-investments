@@ -16,7 +16,7 @@ export function InquiryStrip() {
             asChild
             variant="solid"
             size="lg"
-            className="px-8 h-14 text-base group"
+            className="px-8 h-14 group"
           >
             <a href="#contact">
               Let&apos;s Connect

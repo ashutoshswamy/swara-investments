@@ -23,10 +23,16 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-3xl mx-auto w-full px-6 lg:px-12 py-28 text-center">
         <div className="animate-fade-up">
-          <p className="text-sm font-mono tracking-[0.2em] uppercase text-background/60 mb-6">
+          <p
+            className="tracking-[0.2em] uppercase text-background/60 mb-6 font-light"
+            style={{ fontFamily: "var(--font-sansation)", fontSize: 20 }}
+          >
             Because dreams need a plan
           </p>
-          <h1 className="text-heading italic leading-[1.08] tracking-tight text-background">
+          <h1
+            className="italic leading-[1.08] tracking-tight text-background font-normal"
+            style={{ fontFamily: "var(--font-libre-baskerville)", fontSize: 45 }}
+          >
             Good vacations don&apos;t happen by luck. Neither does good money.
           </h1>
           <div className="mt-10 flex justify-center">
@@ -34,7 +40,7 @@ export function HeroSection() {
               asChild
               variant="solid"
               size="lg"
-              className="px-8 h-14 text-base group"
+              className="px-8 h-14 group"
             >
               <a href="#contact">
                 Entrust us with your plan

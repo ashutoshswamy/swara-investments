@@ -18,12 +18,13 @@ const team = [
   },
 ];
 
-// TODO: replace with real client testimonials (with consent) once collected
+// TODO: replace Person 4/5 with real client testimonials (with consent) once collected
 const testimonials = [
-  { quote: "They explained the reasoning behind every recommendation instead of just pushing a product. That's rare.", name: "Person 1", designation: "Designation", company: "Company" },
-  { quote: "Responsive, transparent about fees, and never made me feel rushed into a decision.", name: "Person 2", designation: "Designation", company: "Company" },
-  { quote: "Finally an advisor who tracks the whole plan, not just the product they sold me.", name: "Person 3", designation: "Designation", company: "Company" },
-  { quote: "Doorstep service, one point of contact for every policy and fund we hold. Makes life easy.", name: "Person 4", designation: "Designation", company: "Company" },
+  { name: "Sanjay Kanojiya", quote: "Swara investments provides exceptional service, especially when it came to transitioning my portfolio. Their team is incredibly response." },
+  { name: "Debajyoti Bagchi", quote: "Mandar knows exactly how to use money efficiently to create wealth, how mind works behind money and the psychology behind the money." },
+  { name: "Chetan Jadhav", quote: "Swara Investments is highly reliable and trustworthy. Whenever i needed help, they were there for me at every step." },
+  { name: "Person 4", quote: "Things they have to say about Swara Investments" },
+  { name: "Person 5", quote: "Things they have to say about Swara Investments" },
 ];
 
 export function ApproachSection() {

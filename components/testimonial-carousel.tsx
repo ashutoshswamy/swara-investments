@@ -7,8 +7,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export type Testimonial = {
   name: string;
-  designation: string;
-  company: string;
+  designation?: string;
+  company?: string;
   quote: string;
   avatarUrl?: string;
 };
@@ -64,9 +64,11 @@ function Card({ testimonial }: { testimonial: Testimonial }) {
         <p className="font-display text-2xl text-foreground leading-tight">
           {testimonial.name}
         </p>
-        <p className="text-sm italic text-muted-foreground">
-          {testimonial.designation}, {testimonial.company}
-        </p>
+        {(testimonial.designation || testimonial.company) && (
+          <p className="text-sm italic text-muted-foreground">
+            {[testimonial.designation, testimonial.company].filter(Boolean).join(", ")}
+          </p>
+        )}
       </div>
       <p className="text-foreground/70 leading-relaxed">{testimonial.quote}</p>
     </div>
