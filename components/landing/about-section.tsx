@@ -27,6 +27,7 @@ const features = [
       "Markets move. Life moves faster. You need someone tracking both — not just your portfolio, but your goals, your timeline, and the curveballs in between. That's the job we signed up for.",
     imageSide: "right" as const,
     image: "/scenery/PHOTO-2026-07-29-17-51-40.jpg",
+    ctaHref: "#approach",
   },
   {
     title: "While you live your life, your money's building one too",
@@ -34,6 +35,7 @@ const features = [
       "You don't have to choose between enjoying today and planning for tomorrow. We build strategies that let both happen at once — so your money's working while you're out living.",
     imageSide: "left" as const,
     image: "/scenery/PHOTO-2026-07-29-17-50-43.jpg",
+    ctaHref: "#register",
   },
   {
     title: "This is where you hear what exactly needs to be heard",
@@ -41,6 +43,7 @@ const features = [
       "No templated advice. No jargon dump. Just a real conversation about where your money's going, where it should go, and what's actually realistic for you — served straight, no sugar.",
     imageSide: "right" as const,
     image: "/scenery/PHOTO-2026-07-29-17-51-25.jpg",
+    ctaHref: "#services",
   },
 ];
 
@@ -66,7 +69,7 @@ function FeatureRow({
         variant="solid"
         className="h-11 px-6 group"
       >
-        <a href="#contact">
+        <a href={feature.ctaHref}>
           Learn more
           <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
         </a>
@@ -202,7 +205,7 @@ function RegisterCta() {
   const [ref, isVisible] = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className="border-b border-foreground/10 bg-accent text-accent-foreground">
+    <div id="register" ref={ref} className="border-b border-foreground/10 bg-accent text-accent-foreground">
       <div
         className={`max-w-[1400px] mx-auto px-6 lg:px-12 py-16 lg:py-20 flex flex-col items-center text-center gap-6 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
