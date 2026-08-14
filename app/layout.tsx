@@ -118,7 +118,7 @@ const jsonLd = {
   logo: `${SITE_URL}/logo2.png`,
   image: `${SITE_URL}/og-image.jpg`,
   description: DESCRIPTION,
-  email: 'mandarkadam@swarainvestments.com',
+  email: 'mandar@swarainvestments.in',
   telephone: '+91-98920-5544',
   address: {
     '@type': 'PostalAddress',

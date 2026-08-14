@@ -8,7 +8,7 @@ const quickLinks = [
 ];
 
 const CONTACT_PHONES = ["+91 98920 5544", "93228 55444"];
-const CONTACT_EMAIL = "mandarkadam@swarainvestments.com";
+const CONTACT_EMAIL = "mandar@swarainvestments.in";
 
 export function FooterSection() {
   const year = new Date().getFullYear();
