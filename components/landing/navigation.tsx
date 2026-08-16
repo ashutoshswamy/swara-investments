@@ -5,9 +5,10 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "About Us", href: "#approach" },
-  { name: "Services", href: "#services" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "About Us", href: "/#approach" },
+  { name: "Services", href: "/#services" },
+  { name: "Calculators", href: "/calculators" },
+  { name: "Contact Us", href: "/#contact" },
 ];
 
 export function Navigation() {
@@ -17,7 +18,7 @@ export function Navigation() {
     <header className="fixed top-0 z-50 w-full bg-background shadow-sm">
       <div className="max-w-[1400px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 shrink-0">
+        <a href="/" className="flex items-center gap-3 shrink-0">
           <Image
             src="/logo2.png"
             alt="Swara Investments"
@@ -32,7 +33,7 @@ export function Navigation() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="hidden lg:flex items-center gap-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -47,7 +48,7 @@ export function Navigation() {
         {/* Mobile menu button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="liquid-glass-hover md:hidden w-10 h-10 flex items-center justify-center rounded-full text-foreground"
+          className="liquid-glass-hover lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-foreground"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -56,7 +57,7 @@ export function Navigation() {
 
       {/* Mobile Menu - Full Screen Overlay */}
       <div
-        className={`md:hidden fixed inset-x-0 top-20 bottom-0 bg-background z-40 transition-all duration-500 ${
+        className={`lg:hidden fixed inset-x-0 top-20 bottom-0 bg-background z-40 transition-all duration-500 ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
