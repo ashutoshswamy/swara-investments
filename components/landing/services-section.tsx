@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { ArrowRight } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
@@ -151,6 +152,19 @@ export function ServicesSection() {
               <ServiceTile key={service.title} service={service} index={index} />
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Calculators CTA */}
+      <div className="border-t border-foreground/10 bg-muted py-16 lg:py-20">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-8 text-center sm:text-left">
+          <h3 className="text-subheading tracking-tight">Plan your Investments</h3>
+          <LiquidButton asChild variant="solid" size="lg" className="px-8 h-14 group shrink-0">
+            <Link href="/calculators">
+              Explore Calculators
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </LiquidButton>
         </div>
       </div>
 
