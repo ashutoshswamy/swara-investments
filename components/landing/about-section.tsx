@@ -26,7 +26,7 @@ const features = [
     copy:
       "Markets move. Life moves faster. You need someone tracking both — not just your portfolio, but your goals, your timeline, and the curveballs in between. That's the job we signed up for.",
     imageSide: "right" as const,
-    image: "/hero.jpg",
+    image: "/whos%20got%20your%20back.png",
     ctaHref: "#approach",
   },
   {
