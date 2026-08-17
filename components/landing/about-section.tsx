@@ -26,7 +26,7 @@ const features = [
     copy:
       "Markets move. Life moves faster. You need someone tracking both — not just your portfolio, but your goals, your timeline, and the curveballs in between. That's the job we signed up for.",
     imageSide: "right" as const,
-    image: "/scenery/PHOTO-2026-07-29-17-51-40.jpg",
+    image: "/hero.jpg",
     ctaHref: "#approach",
   },
   {
@@ -34,7 +34,7 @@ const features = [
     copy:
       "You don't have to choose between enjoying today and planning for tomorrow. We build strategies that let both happen at once — so your money's working while you're out living.",
     imageSide: "left" as const,
-    image: "/scenery/PHOTO-2026-07-29-17-50-43.jpg",
+    image: "/While%20you%20live%20your%20life,%20your%20money's%20building%20one%20too.jpg",
     ctaHref: "#register",
   },
   {
@@ -42,7 +42,7 @@ const features = [
     copy:
       "No templated advice. No jargon dump. Just a real conversation about where your money's going, where it should go, and what's actually realistic for you — served straight, no sugar.",
     imageSide: "right" as const,
-    image: "/scenery/PHOTO-2026-07-29-17-51-25.jpg",
+    image: "/This%20is%20where%20you%20hear%20what%20exactly%20needs%20to%20be%20heard.jpg",
     ctaHref: "#services",
   },
 ];

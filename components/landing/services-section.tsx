@@ -10,7 +10,7 @@ import { useReveal } from "@/hooks/use-reveal";
 const services = [
   {
     title: "Mutual Fund",
-    image: "/scenery/PHOTO-2026-07-29-17-51-43.jpg",
+    image: "/services%20Section/mutual%20funds.jpg",
     bullets: [
       "A Mutual Fund is a trust that pools the savings of a number of investors who share the common financial goal.",
       "We provide lump sum as well as SIP investment options to our clients, investing across Debt, Equity, Balance, Liquid, Index, and Arbitrage funds as per their requirements.",
@@ -19,7 +19,7 @@ const services = [
   },
   {
     title: "Life Insurance",
-    image: "/scenery/PHOTO-2026-07-29-17-51-39.jpg",
+    image: "/services%20Section/life%20insurance.jpg",
     bullets: [
       "Life insurance is a contract that pledges payment of an amount to the person assured (or his/her nominee) on the happening of the event insured against.",
       "In life insurance we provide Term Plans, Traditional Plans, ULIPs, and Pension Plans and so on.",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     title: "Health Insurance",
-    image: "/scenery/PHOTO-2026-07-29-17-51-38.jpg",
+    image: "/services%20Section/health%20insurance.jpg",
     bullets: [
       "Health insurance is insurance that pays for medical expenses. It is sometimes used more broadly to include insurance covering disability or long-term nursing or custodial care needs.",
       "It may be provided through a government-sponsored social insurance program, or from private insurance companies.",
@@ -36,7 +36,7 @@ const services = [
   },
   {
     title: "Motor Insurance",
-    image: "/scenery/PHOTO-2026-07-29-17-51-42.jpg",
+    image: "/services%20Section/Motor%20insurance.png",
     bullets: [
       "Insurance purchased by the owner of a vehicle to cover losses due to traffic accidents or theft.",
       "In Motor Insurance we have tie-ups with General Insurance Co Ltd and so on.",
@@ -45,7 +45,7 @@ const services = [
   },
   {
     title: "Consultancy & Compliance Services",
-    image: "/scenery/PHOTO-2026-07-29-17-50-36.jpg",
+    image: "/services%20Section/Compliance%20and%20Consultancy.jpg",
     bullets: [
       "Portfolio and financial planning.",
       "Merger and acquisitions.",
